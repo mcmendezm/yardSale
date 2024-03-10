@@ -45,6 +45,10 @@
             display: flex;
             flex-direction: column;
         }
+        .form div{
+            display: flex;
+            flex-direction: column;
+        }
         .label{
             font-size: var(--sm);
             font-weight: bold;
@@ -79,8 +83,15 @@
             margin-bottom: 30px;
         }
         @media (max-width: 640px) {
-            .primary-button{
-                margin-top: 140px;
+            .form-container{
+                height: 100%;
+            }
+            .form{
+                height: 100%;
+                justify-content: space-between;
+            }
+            .title{
+                margin-top: 50px;
             }
         } 
 
@@ -94,12 +105,14 @@
             <h1 class="title">My account</h1>
             
             <form action="/" class="form">
-                <label class="label" for="name">Name</label>
-                <input class="input input-name" type="text" id="name" placeholder="nombre">
-                <label class="label" for="email">Email</label>
-                <input class="input input-email" type="email" id="email" placeholder="correo@gmail.com">
-                <label class="label" for="password">Password</label>
-                <input class="input input-password" id="password" type="password" placeholder="**********">
+                <div >
+                    <label class="label" for="name">Name</label>
+                    <input class="input input-name" type="text" id="name" placeholder="nombre">
+                    <label class="label" for="email">Email</label>
+                    <input class="input input-email" type="email" id="email" placeholder="correo@gmail.com">
+                    <label class="label" for="password">Password</label>
+                    <input class="input input-password" id="password" type="password" placeholder="**********">
+                </div>
                 
                 <input type="submit" value="Create" class="primary-button login-button">
             </form>
